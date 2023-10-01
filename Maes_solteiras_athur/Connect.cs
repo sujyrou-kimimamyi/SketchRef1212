@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Maes_solteiras_athur
+namespace sketchref
 {
     internal class Connect
 

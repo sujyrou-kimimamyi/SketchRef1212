@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Maes_solteiras_athur
+namespace sketchref
 {
     internal static class Program
     {

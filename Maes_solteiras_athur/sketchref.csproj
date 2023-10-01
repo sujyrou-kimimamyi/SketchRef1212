@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0EA232FC-7B7C-4173-861E-65DC3838E047}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Maes_solteiras_athur</RootNamespace>
-    <AssemblyName>Maes_solteiras_athur</AssemblyName>
+    <RootNamespace>sketchref</RootNamespace>
+    <AssemblyName>sketchref</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -98,12 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image-31.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2015-04-30-happn %281%29.jpg" />

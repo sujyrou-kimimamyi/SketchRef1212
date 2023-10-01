@@ -1,4 +1,4 @@
-﻿namespace Maes_solteiras_athur
+﻿namespace sketchref
 {
     partial class Form1
     {
@@ -42,7 +42,6 @@
             this.Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Telefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CEP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Senha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -145,7 +144,6 @@
             this.Nome,
             this.Email,
             this.Telefone,
-            this.CEP,
             this.Senha});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
@@ -178,11 +176,6 @@
             // 
             this.Telefone.Text = "Telefone";
             this.Telefone.Width = 80;
-            // 
-            // CEP
-            // 
-            this.CEP.Text = "CEP";
-            this.CEP.Width = 80;
             // 
             // Senha
             // 
@@ -256,7 +249,6 @@
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Nome;
         private System.Windows.Forms.ColumnHeader Email;
-        private System.Windows.Forms.ColumnHeader CEP;
         private System.Windows.Forms.ColumnHeader Senha;
         private System.Windows.Forms.ColumnHeader Telefone;
         private System.Windows.Forms.Label label4;
