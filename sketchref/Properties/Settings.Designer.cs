@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Maes_solteiras_athur.Properties
+namespace sketchref.Properties
 {
 
 
