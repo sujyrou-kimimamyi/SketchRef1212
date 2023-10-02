@@ -27,7 +27,7 @@ namespace sketchref
             SqlCommand sqlCom = new SqlCommand();
 
             sqlCom.Connection = conn.ReturnConnection();
-            sqlCom.CommandText = "SELECT * FROM [dbo].[User]";
+            sqlCom.CommandText = "SELECT * FROM [dbo].[User1]";
 
             try
             {
@@ -91,7 +91,7 @@ namespace sketchref
             SqlCommand sqlCommand = new SqlCommand();
 
             sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"INSERT INTO [dbo].[User] VALUES(@Name,@Email,@Phone,@Password)";
+            sqlCommand.CommandText = @"INSERT INTO [dbo].[User1] VALUES(@Name,@Email,@Phone,@Password)";
             sqlCommand.Parameters.AddWithValue("@Name", txt_name.Text);
             sqlCommand.Parameters.AddWithValue("@Email", txt_email.Text);
             sqlCommand.Parameters.AddWithValue("@Phone", txt_telefone.Text);

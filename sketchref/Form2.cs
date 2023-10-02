@@ -27,7 +27,7 @@ namespace sketchref
             SqlCommand sqlCom = new SqlCommand();
 
             sqlCom.Connection = connection.ReturnConnection();
-            sqlCom.CommandText = "SELECT * FROM [dbo].[User]";
+            sqlCom.CommandText = "SELECT * FROM [dbo].[User1]";
 
             try
             {
@@ -66,7 +66,7 @@ namespace sketchref
             SqlCommand sqlCommand = new SqlCommand();
 
             sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"DELETE FROM [dbo].[User] WHERE ID = @ID";
+            sqlCommand.CommandText = @"DELETE FROM [dbo].[User1] WHERE ID = @ID";
             sqlCommand.Parameters.AddWithValue("@ID", Id);
             try
             {
@@ -94,7 +94,7 @@ namespace sketchref
             SqlCommand sqlCommand = new SqlCommand();
 
             sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"UPDATE [dbo].[User] SET 
+            sqlCommand.CommandText = @"UPDATE [dbo].[User1] SET 
                  Name       = @Name, 
                  Email      = @Email,
                  Phone   = @Phone, 

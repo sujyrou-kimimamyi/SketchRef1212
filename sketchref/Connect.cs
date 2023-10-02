@@ -13,7 +13,7 @@ namespace sketchref
     {
         //Propriedades ou atributos
         private readonly SqlConnection connection;
-        private readonly string DataBase = "sketchrefdbs";
+        private readonly string DataBase = "sketchref1";
 
         //Construtor
         public Connect()                            
