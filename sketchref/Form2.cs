@@ -62,29 +62,17 @@ namespace sketchref
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Connect connection = new Connect();
-            SqlCommand sqlCommand = new SqlCommand();
 
-            sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"DELETE FROM [dbo].[User1] WHERE ID = @ID";
-            sqlCommand.Parameters.AddWithValue("@ID", Id);
-            try
-            {
-                sqlCommand.ExecuteNonQuery();
-                UpdateListView();
-                MessageBox.Show("Dados excluídos.",
-               "AVISO",
-               MessageBoxButtons.OK,
-               MessageBoxIcon.Information);
-            }
-            catch (Exception err)
-            {
-                throw new Exception("Não foi possível excluir os dados..\n" + err.Message);
-            }
-            finally
-            {
-                connection.CloseConnection();
-            }
+            UserDAO nobj = new UserDAO();
+            nobj.DeleteUser(Id);
+            
+            text1.Clear();
+            text2.Clear();
+            text3.Clear();
+            text4.Clear();
+            txtID.Clear();
+
+            UpdateListView();
         }
 
         private void btn1_Click(object sender, EventArgs e)
