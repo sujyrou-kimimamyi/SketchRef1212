@@ -77,6 +77,23 @@ namespace sketchref
 
         private void btn1_Click(object sender, EventArgs e)
         {
+            try {
+                User usobj = new User(
+                    txt_name.Text,
+                    txt_email.Text,
+                    txt_telefone.Text,
+                    txt_cadastro.Text
+                    ); 
+                UserDAO nobj = new UserDAO();
+            nobj.InsertUser(usobj);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
+
+           
 
             string Name = txt_name.Text, 
                    Email = txt_email.Text, 
@@ -87,17 +104,7 @@ namespace sketchref
                 "Nome: " + Name + "\nEmail: " + Email + "\nTelefone: " + Phone + "\nSenha: " + Password, "Info"
             );
 
-            Connect connection = new Connect();
-            SqlCommand sqlCommand = new SqlCommand();
-
-            sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"INSERT INTO [dbo].[User1] VALUES(@Name,@Email,@Phone,@Password)";
-            sqlCommand.Parameters.AddWithValue("@Name", txt_name.Text);
-            sqlCommand.Parameters.AddWithValue("@Email", txt_email.Text);
-            sqlCommand.Parameters.AddWithValue("@Phone", txt_telefone.Text);
-            sqlCommand.Parameters.AddWithValue("@Password", txt_cadastro.Text);
-            sqlCommand.ExecuteNonQuery();
-
+           
             txt_name.Clear();
             txt_email.Clear();
             txt_telefone.Clear(); 

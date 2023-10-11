@@ -21,41 +21,61 @@ namespace sketchref
                     string phone)
         {
             
-            _name = name;
-            _email = email;  
-            _password = password;
-            _phone = phone;
+            Name = name;
+            Email = email;  
+            Password = password;
+            Phone = phone;
 
         }
 
         //propina
         public string Name
         {
-            set { _name = value; }
+            set { 
+                    if (string.IsNullOrEmpty(value))
+                        throw new Exception("vai tomar no cu ta errado fais direito ai");
+                
+                    _name = value; 
+                }
             get { return _name; }
         }
 
         public int Id
         {
-            set { _id = value; }
+            set {_id = value; }
             get { return _id; }
         }
 
         public string Phone
         {
-            set { _phone = value; }
+            set { 
+                    if (string.IsNullOrEmpty(value))
+                        throw new Exception("vai tomar no cu ta errado fais direito ai");
+                
+                    _phone = value; 
+                }
             get { return _phone; }
         }
 
         public string Password
         {
-            set { _password = value; }
+            set { 
+                    if (string.IsNullOrEmpty(value))
+                        throw new Exception("vai tomar no cu ta errado fais direito ai");
+                
+                    _password = value; 
+                }
             get { return _password; }
         }
 
         public string Email
         {
-            set { _email = value; }
+            set { 
+                    if (string.IsNullOrEmpty(value))
+                        throw new Exception("vai tomar no cu ta errado fais direito ai");
+                
+                    _email = value; 
+                }
             get { return _email; }
         }
 

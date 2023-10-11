@@ -38,5 +38,20 @@ namespace sketchref
             }
         }
 
+        public void InsertUser(User usobj)
+        {
+            Connect connection = new Connect();
+            SqlCommand sqlCommand = new SqlCommand();
+
+            sqlCommand.Connection = connection.ReturnConnection();
+            sqlCommand.CommandText = @"INSERT INTO [dbo].[User1] VALUES(@Name,@Email,@Phone,@Password)";
+            sqlCommand.Parameters.AddWithValue("@Name", usobj.Name);
+            sqlCommand.Parameters.AddWithValue("@Email", usobj.Email);
+            sqlCommand.Parameters.AddWithValue("@Phone", usobj.Phone);
+            sqlCommand.Parameters.AddWithValue("@Password", usobj.Password);
+            sqlCommand.ExecuteNonQuery();
+
+        }
+
     }
 }
