@@ -11,6 +11,7 @@ namespace sketchref
     internal class UserDAO
     {
 
+
         public void DeleteUser(int Id)
         {
             Connect connection = new Connect();
@@ -25,7 +26,7 @@ namespace sketchref
                 //UpdateListView();
                 MessageBox.Show("Dados excluídos.",
                "AVISO",
-               MessageBoxButtons.OK,
+                MessageBoxButtons.OK,
                MessageBoxIcon.Information);
             }
             catch (Exception err)
@@ -50,7 +51,8 @@ namespace sketchref
             sqlCommand.Parameters.AddWithValue("@Phone", usobj.Phone);
             sqlCommand.Parameters.AddWithValue("@Password", usobj.Password);
             sqlCommand.ExecuteNonQuery();
-
+            
+            //UpdateListView();
         }
 
     }

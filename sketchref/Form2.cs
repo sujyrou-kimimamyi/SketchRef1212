@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System; 
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
@@ -70,7 +69,7 @@ namespace sketchref
             text2.Clear();
             text3.Clear();
             text4.Clear();
-            txtID.Clear();
+           
 
             UpdateListView();
         }
@@ -89,13 +88,12 @@ namespace sketchref
                  Password      = @Password
                  WHERE ID   = @ID";
 
+
+            //sqlCommand.Parameters.AddWithValue("@ID", text4.Text);
             sqlCommand.Parameters.AddWithValue("@Name", text1.Text);
             sqlCommand.Parameters.AddWithValue("@Email", text2.Text);
             sqlCommand.Parameters.AddWithValue("@Phone", text3.Text);
-           
             sqlCommand.Parameters.AddWithValue("@Password", text4.Text);
-            sqlCommand.Parameters.AddWithValue("@ID", txtID.Text);
-
             sqlCommand.ExecuteNonQuery();
 
             MessageBox.Show("Dados atualizados.",
@@ -107,7 +105,7 @@ namespace sketchref
             text2.Clear();
             text3.Clear();
             text4.Clear();
-            txtID.Clear();
+          
 
             UpdateListView();
         }
@@ -117,11 +115,10 @@ namespace sketchref
             int index;
             index = listView1.FocusedItem.Index;
             Id = int.Parse(listView1.Items[index].SubItems[0].Text);
-            txtID.Text = listView1.Items[index].SubItems[0].Text;
             text1.Text = listView1.Items[index].SubItems[1].Text;
             text2.Text = listView1.Items[index].SubItems[2].Text;
             text3.Text = listView1.Items[index].SubItems[3].Text;
-            text4.Text = listView1.Items[index].SubItems[5].Text;
+            text4.Text = listView1.Items[index].SubItems[4].Text;
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,6 +134,30 @@ namespace sketchref
         private void txtID_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbl_edic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            User user = new User(text1.Text,
+                   text2.Text,
+                   text4.Text,
+                   text3.Text);
+
+            UserDAO insertuser = new UserDAO();
+            insertuser.InsertUser(user);
+
+            text1.Clear();
+            text2.Clear();
+            text3.Clear();
+            text4.Clear();
+
+
+            UpdateListView();
         }
     }
 }
